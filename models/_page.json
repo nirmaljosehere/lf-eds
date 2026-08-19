@@ -21,6 +21,46 @@
           "name": "keywords",
           "multi": true,
           "label": "Keywords"
+        },
+        {
+          "component": "select",
+          "valueType": "string",
+          "name": "robots",
+          "label": "Robots",
+          "value": "index, follow",
+          "options": [
+            {
+              "name": "Index, Follow (default)",
+              "value": "index, follow"
+            },
+            {
+              "name": "No Index, Follow",
+              "value": "noindex, follow"
+            },
+            {
+              "name": "No Index, No Follow",
+              "value": "noindex, nofollow"
+            }
+          ]
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "canonical",
+          "label": "Canonical URL"
+        },
+        {
+          "component": "reference",
+          "valueType": "string",
+          "name": "image",
+          "label": "Social Share Image",
+          "multi": false
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "json-ld",
+          "label": "JSON-LD"
         }
       ]
     }

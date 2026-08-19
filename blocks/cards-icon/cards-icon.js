@@ -18,7 +18,7 @@ export default function decorate(block) {
   });
   ul.querySelectorAll('picture > img').forEach((img) => {
     // Only run EDS image optimization for same-origin assets; externally hosted
-    // images (e.g. natwest.com SVG icons) 404 when rewritten with CDN params.
+    // images (e.g. externally-hosted SVG icons) 404 when rewritten with CDN params.
     let sameOrigin = false;
     try {
       sameOrigin = new URL(img.src, window.location.href).origin === window.location.origin;

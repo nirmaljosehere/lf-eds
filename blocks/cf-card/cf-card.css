@@ -29,7 +29,7 @@
 
 .cf-card-body h3 {
   margin: 0 0 8px;
-  color: var(--nw-purple, var(--heading-color));
+  color: var(--lf-navy, var(--heading-color));
 }
 
 .cf-card-body p {
@@ -43,7 +43,7 @@
 
 .cf-card-body p:last-child a:any-link {
   font-weight: 700;
-  color: var(--nw-purple-bright, var(--link-color));
+  color: var(--lf-blue, var(--link-color));
   text-decoration: none;
 }
 
@@ -55,7 +55,7 @@
 .cf-card-json {
   overflow-x: auto;
   border-radius: 8px;
-  background-color: var(--nw-purple, #3c1053);
+  background-color: var(--lf-navy, #00427a);
   padding: 16px;
   color: #fff;
   font-size: var(--body-font-size-s);

@@ -1,15 +1,15 @@
-# NatWest xwalk demo
+# Länsförsäkringar xwalk demo
 
-A demo NatWest-branded banking site built on **AEM Edge Delivery Services (EDS)**, authored via **Universal Editor / AEM as a Content Source (xwalk)**. Used as a hands-on demo of AEM CS + Universal Editor + EDS + Content Fragments working together.
+A demo Länsförsäkringar-branded banking site built on **AEM Edge Delivery Services (EDS)**, authored via **Universal Editor / AEM as a Content Source (xwalk)**. Used as a hands-on demo of AEM CS + Universal Editor + EDS + Content Fragments working together.
 
 ## Environments
 
 | Environment | URL |
 |---|---|
 | Author (edit content here) | https://author-p189773-e1977501.adobeaemcloud.com |
-| Preview (previewed content) | https://main--natwest-xwalk--skiper76.aem.page/ |
-| Live (published content) | https://main--natwest-xwalk--skiper76.aem.live/ |
-| GitHub repo | https://github.com/Skiper76/natwest-xwalk |
+| Preview (previewed content) | https://main--lf-eds--nirmaljosehere.aem.page/ |
+| Live (published content) | https://main--lf-eds--nirmaljosehere.aem.live/ |
+| GitHub repo | https://github.com/nirmaljosehere/lf-eds |
 | Cloud Manager program | "DEMO POT EMEA Program 6 - Natwest" |
 
 To edit a page, open it on the **author** host and append `?cmd=open` via the Sidekick, or open the page directly in Universal Editor from AEM Sites.

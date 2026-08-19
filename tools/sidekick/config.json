@@ -1,7 +1,7 @@
 {
   "project": "AEM XWalk Boilerplate",
-  "host": "main--natwest-xwalk--skiper76.aem.live",
-  "previewHost": "main--natwest-xwalk--skiper76.aem.page",
+  "host": "main--lf-eds--nirmaljosehere.aem.live",
+  "previewHost": "main--lf-eds--nirmaljosehere.aem.page",
   "editUrlLabel": "AEM Editor",
   "editUrlPattern": "{{contentSourceUrl}}{{pathname}}?cmd=open",
   "plugins": [
@@ -25,7 +25,7 @@
         "preview",
         "edit"
       ],
-      "url": "https://main--natwest-xwalk--skiper76.aem.page/tools/sidekick/library.html",
+      "url": "https://main--lf-eds--nirmaljosehere.aem.page/tools/sidekick/library.html",
       "includePaths": [
         "**"
       ]

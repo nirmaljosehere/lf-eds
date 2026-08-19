@@ -41,13 +41,13 @@
 .cards-account .cards-account-card-body h4,
 .cards-account .cards-account-card-body h5,
 .cards-account .cards-account-card-body h6 {
-  color: var(--text-dark, #3c1053);
+  color: var(--text-dark, #00427a);
   margin: 0 0 8px;
 }
 
 /* Price line rendered as an emphasised paragraph (e.g. "£36 a month") */
 .cards-account .cards-account-card-body p strong {
-  color: var(--text-dark, #3c1053);
+  color: var(--text-dark, #00427a);
 }
 
 .cards-account .cards-account-card-body ul {

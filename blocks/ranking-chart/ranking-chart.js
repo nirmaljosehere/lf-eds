@@ -1,7 +1,7 @@
 /*
  * Ranking Chart Block
  * Renders a ranked list of percentage bars (e.g. a regulatory service-quality
- * comparison). Bold the name (e.g. <strong>NatWest</strong>) to mark the
+ * comparison). Bold the name (e.g. <strong>Länsförsäkringar</strong>) to mark the
  * "own brand" row: it gets an outlined bar instead of a filled one.
  */
 export default function decorate(block) {

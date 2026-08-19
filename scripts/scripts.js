@@ -16,7 +16,7 @@ import {
 } from './experiment-loader.js';
 
 const experimentationConfig = {
-  prodHost: 'main--natwest-xwalk--skiper76.aem.live',
+  prodHost: 'main--lf-eds--nirmaljosehere.aem.live',
   audiences: {
     mobile: () => window.innerWidth < 600,
     desktop: () => window.innerWidth >= 600,

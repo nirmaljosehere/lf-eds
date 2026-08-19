@@ -56,7 +56,7 @@
 .carousel-cards .carousel-cards-slide .carousel-cards-slide-content h4,
 .carousel-cards .carousel-cards-slide .carousel-cards-slide-content h5,
 .carousel-cards .carousel-cards-slide .carousel-cards-slide-content h6 {
-  color: var(--text-dark, #3c1053);
+  color: var(--text-dark, #00427a);
   margin: 0 0 12px;
 }
 
@@ -86,7 +86,7 @@
 .carousel-cards .carousel-cards-slide-indicator button:disabled,
 .carousel-cards .carousel-cards-slide-indicator button:hover,
 .carousel-cards .carousel-cards-slide-indicator button:focus-visible {
-  background-color: var(--brand-purple, #3c1053);
+  background-color: var(--brand-purple, #00427a);
 }
 
 /* Show multiple cards per view on wider screens */

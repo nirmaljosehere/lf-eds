@@ -188,7 +188,7 @@ button.button.primary:focus-visible {
   border-color: var(--dark-color);
   background-color: var(--dark-color);
   color: var(--background-color);
-  box-shadow: 0 4px 12px rgb(60 16 83 / 30%);
+  box-shadow: 0 4px 12px rgb(0 66 122 / 30%);
 }
 
 a.button.primary[aria-disabled="true"],
@@ -241,9 +241,9 @@ a.button.accent:hover,
 a.button.accent:focus-visible,
 button.button.accent:hover,
 button.button.accent:focus-visible {
-  border-color: var(--nw-purple-mid);
-  background-color: var(--nw-purple-mid);
-  box-shadow: 0 4px 12px rgb(60 16 83 / 40%);
+  border-color: var(--lf-blue);
+  background-color: var(--lf-blue);
+  box-shadow: 0 4px 12px rgb(0 66 122 / 40%);
 }
 
 a.button.accent[aria-disabled="true"],
@@ -322,7 +322,7 @@ main .section.highlight {
 }
 
 main .section.purple-tint {
-  background-color: var(--nw-purple-tint);
+  background-color: var(--lf-blue-tint);
   margin: 0;
   padding: 40px 0;
 }
@@ -335,9 +335,9 @@ main .section.purple-tint a.button.primary:any-link {
 
 main .section.purple-tint a.button.primary:hover,
 main .section.purple-tint a.button.primary:focus-visible {
-  background-color: var(--nw-purple-mid);
-  border-color: var(--nw-purple-mid);
-  box-shadow: 0 4px 12px rgb(60 16 83 / 40%);
+  background-color: var(--lf-blue);
+  border-color: var(--lf-blue);
+  box-shadow: 0 4px 12px rgb(0 66 122 / 40%);
 }
 
 /* default-content CTA groups: consistent spacing between stacked CTAs.
@@ -403,9 +403,9 @@ main .section.swoosh a:any-link {
 }
 
 /* swoosh: purple banner with a hand-drawn pink underline accent below the heading,
-   e.g. "Our brands" - see brand.css for --nw-pink-accent */
+   e.g. "Our brands" - see brand.css for --lf-red */
 main .section.swoosh {
-  background-color: var(--nw-purple-mid);
+  background-color: var(--lf-blue);
 }
 
 main .section.swoosh h1,
@@ -466,7 +466,7 @@ main .section.checklist li::before {
   content: '✓';
   position: absolute;
   left: 0;
-  color: var(--nw-purple-mid, var(--link-color));
+  color: var(--lf-blue, var(--link-color));
   font-weight: 700;
 }
 
@@ -484,11 +484,11 @@ main .section.guides .columns > div {
 
 main .section.guides .columns > div > div {
   padding-top: 12px;
-  border-top: 3px solid var(--nw-pink-accent, var(--link-color));
+  border-top: 3px solid var(--lf-red, var(--link-color));
 }
 
 main .section.guides .columns > div > div:nth-child(2) {
-  border-top-color: var(--nw-orange-accent, var(--dark-color));
+  border-top-color: var(--lf-orange, var(--dark-color));
 }
 
 main .section.guides ul {
@@ -501,7 +501,7 @@ main .section.guides li {
   margin-bottom: 12px;
 }
 
-/* with-sidebar: single-column article body (matches natwest.com's own article
+/* with-sidebar: single-column article body (matches a typical bank's own article
    template - no floating rail, no hero image; the toc sits inline right
    after the byline, and related-articles is a full-width card grid at the
    end). Keeping the style name for backwards compatibility with authored

@@ -168,7 +168,7 @@ export default async function decorate(block) {
   // Target any img in the brand (there is only the logo); the original content src
   // may be a broken/relative path or "about:error", so we don't filter on it.
   const brandLogo = navBrand.querySelector('img');
-  if (brandLogo) brandLogo.src = '/icons/natwest-logo.svg';
+  if (brandLogo) brandLogo.src = '/icons/lf-logo.svg';
 
   const navWrapper = document.createElement('div');
   navWrapper.className = 'nav-wrapper';

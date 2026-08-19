@@ -52,7 +52,7 @@
   margin: 0;
   font-size: 30px;
   line-height: 50px;
-  font-family: var(--black-font-family);
+  font-family: var(--heading-font-family);
 }
 
 .content-fragment-wrapper .content-fragment .banner-content .banner-detail .cftitle::after {
@@ -248,14 +248,14 @@
 .content-fragment-wrapper .content-fragment .banner-content.image-right .banner-detail .cftitle,
 .content-fragment-wrapper .content-fragment .banner-content.image-top .banner-detail .cftitle,
 .content-fragment-wrapper .content-fragment .banner-content.image-bottom .banner-detail .cftitle {
-  color: #3c1053;
+  color: #00427a;
 }
 
 .content-fragment-wrapper .content-fragment .banner-content.image-left .banner-detail .cfsubtitle,
 .content-fragment-wrapper .content-fragment .banner-content.image-right .banner-detail .cfsubtitle,
 .content-fragment-wrapper .content-fragment .banner-content.image-top .banner-detail .cfsubtitle,
 .content-fragment-wrapper .content-fragment .banner-content.image-bottom .banner-detail .cfsubtitle {
-  color: #3c1053;
+  color: #00427a;
 }
 
 .content-fragment-wrapper .content-fragment .banner-content.image-left .banner-detail .cfdescription,
@@ -275,14 +275,14 @@
   /* text-align: left; */ 
 
   /* align-self: flex-start; */
-  color:#5e10b1;
+  color:#005aa0;
 }
 
 .content-fragment-wrapper .content-fragment .banner-content.image-left .banner-detail a::after,
 .content-fragment-wrapper .content-fragment .banner-content.image-right .banner-detail a::after,
 .content-fragment-wrapper .content-fragment .banner-content.image-top .banner-detail a::after,
 .content-fragment-wrapper .content-fragment .banner-content.image-bottom .banner-detail a::after {
-  color: #5e10b1;
+  color: #005aa0;
 }
 
 /* Override text alignment for top/bottom layouts */
@@ -479,10 +479,10 @@
   display: inline-block;
   padding: 12px 24px !important;
   margin: 10px 5px;
-  background-color: #5e10b1 !important;
+  background-color: #005aa0 !important;
   color: #fff !important;
   text-decoration: none;
-  border: 2px solid #5e10b1 !important;
+  border: 2px solid #005aa0 !important;
   border-radius: 4px;
   font-family: var(--heading-font-family);
   font-weight: 600;
@@ -507,14 +507,14 @@
 
 .cta-button a.button:hover {
   background-color: transparent !important;
-  color: #5e10b1 !important;
-  border-color: #5e10b1 !important;
+  color: #005aa0 !important;
+  border-color: #005aa0 !important;
   box-shadow: 0 4px 8px rgb(0 0 0 / 15%);
   transform: translateY(-1px);
 }
 
 .cta-button a.button:hover::after {
-  color: #5e10b1 !important;
+  color: #005aa0 !important;
   transform: translateX(2px);
 }
 
@@ -545,22 +545,22 @@
   position: relative;
   transform: translateY(-1px);
   background-color: transparent;
-  color: #5e10b1 !important;
-  border: 2px solid #5e10b1 !important;
-  border-color: #5e10b1 !important;
+  color: #005aa0 !important;
+  border: 2px solid #005aa0 !important;
+  border-color: #005aa0 !important;
 }
 
 .cta-button-secondary a.button::after {
   content: "\203A";      /* › single right-angle quote, looks like the FA chevron */
   font-family: inherit;
-  color: #5e10b1 !important;
+  color: #005aa0 !important;
   font-size: 20px;
   margin-left: 8px;
   transition: all 0.3s ease;
 }
 
 .cta-button-secondary a.button:hover {
-  background-color: #5e10b1 !important;
+  background-color: #005aa0 !important;
   color: #fff !important;
   text-decoration: none;
 }
@@ -572,11 +572,11 @@
 
 /* cta link */
 .button-container.cta-link a:hover {
-  color: #5e10b1 !important;
+  color: #005aa0 !important;
 }
 
 .button-container.cta-link a:hover::after {
-  color: #5e10b1 !important;
+  color: #005aa0 !important;
 }
 
 .button-container.cta-link {
@@ -589,9 +589,9 @@
   padding: 12px 24px !important;
   margin: 10px 5px;
   background-color: #fff !important;
-  color: #3c1053 !important;
+  color: #00427a !important;
   text-decoration: none;
-  border: 2px solid #3c1053 !important;
+  border: 2px solid #00427a !important;
   border-radius: 4px;
   font-family: var(--heading-font-family);
   font-weight: 600;
@@ -608,16 +608,16 @@
   content: "\f105";
   /* stylelint-disable-next-line font-family-no-missing-generic-family-keyword */
   font-family: 'Font Awesome 5 Solid';
-  color: #3c1053 !important;
+  color: #00427a !important;
   font-size: 20px;
   margin-left: 8px;
   transition: all 0.3s ease;
 }
 
 .cta-button-dark a.button:hover {
-  background-color: #3c1053 !important;
+  background-color: #00427a !important;
   color: #fff !important;
-  border-color: #3c1053 !important;
+  border-color: #00427a !important;
   box-shadow: 0 4px 8px rgb(0 0 0 / 15%);
   transform: translateY(-1px);
 }

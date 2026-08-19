@@ -273,7 +273,7 @@ header nav .nav-tools {
   grid-area: tools;
 }
 
-/* ===== NatWest branding ===== */
+/* ===== Brand-specific header styling ===== */
 
 /* Neutralize EDS button-pill styling on top-level nav links (decorateButtons
    turns single links into a.button — nav items should be plain text links). */
@@ -326,7 +326,7 @@ header nav .nav-tools a:focus {
   header nav .nav-sections .default-content-wrapper > ul > li[aria-expanded='true'] > ul {
     background-color: var(--background-color);
     border-radius: 4px;
-    box-shadow: 0 6px 18px rgb(60 16 83 / 18%);
+    box-shadow: 0 6px 18px rgb(0 66 122 / 18%);
     width: 240px;
   }
 

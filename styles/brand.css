@@ -1,32 +1,32 @@
 /*
- * NatWest brand design tokens
- * Extracted from https://www.natwest.com/
+ * Länsförsäkringar brand design tokens
+ * Sourced from the Länsförsäkringar Design System (LFDS) tokens used in
+ * https://github.com/nirmaljosehere/lansforsakringar
  */
 
 :root {
   /* brand palette */
-  --nw-purple: #3c1053;          /* signature deep purple */
-  --nw-purple-mid: #5a287d;      /* header / nav band */
-  --nw-purple-bright: #5e10b1;   /* links & primary CTAs */
-  --nw-purple-tint: #f2eaf9;     /* light purple surface */
-  --nw-grey-tint: #f2f2f8;       /* light grey surface */
-  --nw-grey-text: #646068;       /* body text */
-  --nw-pink-accent: #f0195b;     /* swoosh underline accent */
-  --nw-orange-accent: #c33c21;   /* ranking-chart bars / regulatory disclosures */
+  --lf-blue: #005aa0;      /* primary brand blue - links, mid-tone surfaces */
+  --lf-navy: #00427a;      /* darkest brand blue - headings, dark surfaces, hover/pressed */
+  --lf-red: #e30613;       /* brand red - logo accent, swoosh underline */
+  --lf-orange: #ed7721;    /* secondary accent - ranking-chart bars / regulatory disclosures */
+  --lf-blue-tint: #eff4f9; /* light blue surface */
+  --lf-grey-tint: #f3f3f3; /* light grey surface */
+  --lf-text: #222;      /* body text */
 
   /* semantic colors */
   --background-color: #fff;
-  --light-color: var(--nw-grey-tint);
-  --dark-color: var(--nw-purple);
-  --text-color: var(--nw-grey-text);
-  --heading-color: var(--nw-purple);
-  --link-color: var(--nw-purple-bright);
-  --link-hover-color: var(--nw-purple);
+  --light-color: var(--lf-grey-tint);
+  --dark-color: var(--lf-navy);
+  --text-color: var(--lf-text);
+  --heading-color: var(--lf-navy);
+  --link-color: var(--lf-blue);
+  --link-hover-color: var(--lf-navy);
 
-  /* fonts (proprietary NatWest faces with fallbacks) */
-  --heading-font-family: knileblack, "Knile", georgia, serif;
-  --heading-font-family-bold: knilebold, "Knile", georgia, serif;
-  --body-font-family: "RNHouseSansRegular", arial, helvetica, sans-serif;
+  /* fonts (Länsförsäkringar brand faces with fallbacks) */
+  --heading-font-family: "LF Rubrik", georgia, serif;
+  --heading-font-family-bold: "LF Rubrik", georgia, serif;
+  --body-font-family: "IBM Plex Sans", arial, helvetica, sans-serif;
 
   /* heading sizes (desktop) */
   --heading-font-size-xxl: 48px;

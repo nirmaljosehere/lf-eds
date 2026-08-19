@@ -52,8 +52,8 @@
 }
 
 .columns-feature-wrapper:last-of-type .columns-feature.columns-feature-1-cols {
-  background-color: var(--nw-purple-tint, #f2eaf9);
-  border: 1px solid rgb(60 16 83 / 8%);
+  background-color: var(--lf-blue-tint, #eff4f9);
+  border: 1px solid rgb(0 66 122 / 8%);
   border-radius: 16px;
   padding: 40px 24px;
 }
@@ -65,7 +65,7 @@
 }
 
 .columns-feature-wrapper:not(:last-of-type) .columns-feature.columns-feature-1-cols {
-  background-color: var(--light-color, #f2f2f8);
+  background-color: var(--light-color, #f3f3f3);
   border-radius: 20px;
   padding: 40px 32px;
 }
@@ -89,13 +89,13 @@
   margin-top: 0;
   margin-bottom: 8px;
   font-size: 28px;
-  color: var(--nw-purple, #3c1053);
+  color: var(--lf-navy, #00427a);
 }
 
 .columns-feature.columns-feature-1-cols p:not(.button-container) {
   margin: 0 0 28px;
   max-width: 640px;
-  color: var(--nw-grey-text, #646068);
+  color: var(--lf-text, #222);
   font-size: 17px;
 }
 
@@ -128,16 +128,16 @@
 .columns-feature.columns-feature-1-cols p.button-container ~ p.button-container a.button:any-link,
 .columns-feature.columns-feature-1-cols p.button-wrapper ~ p.button-wrapper a.button:any-link {
   background-color: transparent;
-  border-color: var(--nw-purple-bright, #5e10b1);
-  color: var(--nw-purple-bright, #5e10b1);
+  border-color: var(--lf-blue, #005aa0);
+  color: var(--lf-blue, #005aa0);
 }
 
 .columns-feature.columns-feature-1-cols p.button-container ~ p.button-container a.button:hover,
 .columns-feature.columns-feature-1-cols p.button-container ~ p.button-container a.button:focus,
 .columns-feature.columns-feature-1-cols p.button-wrapper ~ p.button-wrapper a.button:hover,
 .columns-feature.columns-feature-1-cols p.button-wrapper ~ p.button-wrapper a.button:focus {
-  background-color: var(--nw-purple-bright, #5e10b1);
-  border-color: var(--nw-purple-bright, #5e10b1);
+  background-color: var(--lf-blue, #005aa0);
+  border-color: var(--lf-blue, #005aa0);
   color: #fff;
 }
 
@@ -149,11 +149,11 @@
 
 .columns-feature-wrapper:last-of-type .columns-feature.columns-feature-1-cols p {
   max-width: none;
-  color: var(--nw-grey-text, #646068);
+  color: var(--lf-text, #222);
 }
 
 .columns-feature-wrapper:last-of-type .columns-feature.columns-feature-1-cols a:not(.button) {
-  color: var(--nw-purple-bright, #5e10b1);
+  color: var(--lf-blue, #005aa0);
   font-weight: 600;
 }
 

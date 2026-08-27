@@ -1,7 +1,8 @@
 /* header and nav layout */
 header .nav-wrapper {
-  background-color: var(--dark-color);
-  color: var(--background-color);
+  background-color: var(--background-color);
+  color: var(--text-color);
+  border-bottom: 1px solid var(--light-color);
   width: 100%;
   z-index: 2;
   position: fixed;
@@ -56,7 +57,7 @@ header nav p {
 }
 
 header nav a:any-link {
-  color: var(--background-color);
+  color: var(--text-color);
 }
 
 /* hamburger */
@@ -175,7 +176,7 @@ header nav .nav-sections ul {
 }
 
 header nav .nav-sections ul > li {
-  color: var(--background-color);
+  color: var(--text-color);
   font-weight: 700;
 }
 
@@ -288,7 +289,7 @@ header nav .nav-sections a.button:any-link {
   border-radius: 0;
   padding: 0;
   background: none;
-  color: var(--background-color);
+  color: var(--text-color);
   font-size: inherit;
   font-weight: 700;
   text-decoration: none;
@@ -305,11 +306,11 @@ header nav .nav-sections a.button:focus {
 header nav .nav-tools a:any-link {
   display: inline-block;
   margin: 0;
-  border: 2px solid var(--background-color);
-  border-radius: 2.4em;
+  border: 2px solid var(--dark-color);
+  border-radius: 4px;
   padding: 0.4em 1.4em;
   background: none;
-  color: var(--background-color);
+  color: var(--dark-color);
   font-weight: 700;
   text-decoration: none;
   white-space: nowrap;
@@ -317,12 +318,12 @@ header nav .nav-tools a:any-link {
 
 header nav .nav-tools a:hover,
 header nav .nav-tools a:focus {
-  background-color: var(--background-color);
-  color: var(--dark-color);
+  background-color: var(--dark-color);
+  color: var(--background-color);
 }
 
 @media (width >= 900px) {
-  /* dropdown panels: white surface with purple text */
+  /* dropdown panels: white surface with navy text */
   header nav .nav-sections .default-content-wrapper > ul > li[aria-expanded='true'] > ul {
     background-color: var(--background-color);
     border-radius: 4px;
@@ -345,10 +346,10 @@ header nav .nav-tools a:focus {
   }
 }
 
-/* mobile: sub-links indent, purple-on-white when expanded panel */
+/* mobile: sub-links indent when expanded panel */
 @media (width < 900px) {
   header nav[aria-expanded='true'] .nav-sections ul > li > ul > li a:any-link {
-    color: var(--background-color);
+    color: var(--text-color);
   }
 }
 
@@ -387,41 +388,48 @@ header nav .nav-tools a:focus {
   }
 }
 
-/* light: header on a light surface instead of the default purple band */
-header .header.light .nav-wrapper {
-  background-color: var(--background-color);
-  color: var(--text-color);
+/* dark: solid navy band, alternate to the default light header */
+header .header.dark .nav-wrapper {
+  background-color: var(--dark-color);
+  color: var(--background-color);
+  border-bottom: 0;
 }
 
-header .header.light nav a:any-link {
-  color: var(--text-color);
-}
-
-header .header.light .nav-sections ul > li {
-  color: var(--text-color);
-}
-
-header .header.light .nav-sections a.button:any-link {
-  color: var(--text-color);
-}
-
-header .header.light .nav-tools a:any-link {
-  border-color: var(--text-color);
-  color: var(--text-color);
-}
-
-header .header.light .nav-tools a:hover,
-header .header.light .nav-tools a:focus {
-  background-color: var(--text-color);
+header .header.dark nav a:any-link {
   color: var(--background-color);
 }
 
+header .header.dark .nav-sections ul > li {
+  color: var(--background-color);
+}
+
+header .header.dark .nav-sections a.button:any-link {
+  color: var(--background-color);
+}
+
+header .header.dark .nav-tools a:any-link {
+  border-color: var(--background-color);
+  color: var(--background-color);
+}
+
+header .header.dark .nav-tools a:hover,
+header .header.dark .nav-tools a:focus {
+  background-color: var(--background-color);
+  color: var(--dark-color);
+}
+
+@media (width < 900px) {
+  header .header.dark nav[aria-expanded='true'] .nav-sections ul > li > ul > li a:any-link {
+    color: var(--background-color);
+  }
+}
+
 @media (width >= 900px) {
-  header .header.light .nav-sections .default-content-wrapper > ul > li[aria-expanded='true'] > ul {
+  header .header.dark .nav-sections .default-content-wrapper > ul > li[aria-expanded='true'] > ul {
     background-color: var(--light-color);
   }
 
-  header .header.light .nav-sections .default-content-wrapper > ul > li > ul::before {
+  header .header.dark .nav-sections .default-content-wrapper > ul > li > ul::before {
     border-bottom-color: var(--light-color);
   }
 }

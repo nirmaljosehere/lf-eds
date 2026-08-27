@@ -1,6 +1,6 @@
 footer {
-  background-color: var(--dark-color);
-  color: var(--background-color);
+  background-color: var(--background-color);
+  color: var(--text-color);
   font-size: var(--body-font-size-s);
 }
 
@@ -18,17 +18,25 @@ footer .footer p {
   margin: 0 0 8px;
 }
 
+footer .footer img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
 footer .footer a:any-link {
-  color: var(--background-color);
+  color: var(--link-color);
   text-decoration: none;
 }
 
 footer .footer a:hover {
+  color: var(--link-hover-color);
   text-decoration: underline;
 }
 
 footer .footer h4 {
-  color: var(--background-color);
+  color: var(--heading-color);
   font-family: var(--heading-font-family);
   font-size: 20px;
   font-weight: 400;
@@ -54,7 +62,7 @@ footer .footer .section:first-child ul {
 
 footer .footer .section:first-child li {
   padding: 0 0 20px;
-  border-bottom: 2px solid rgb(255 255 255 / 25%);
+  border-bottom: 2px solid var(--light-color);
 }
 
 footer .footer .section:first-child li a {
@@ -73,15 +81,22 @@ footer .footer .section:nth-child(2) h4:first-child {
   margin-top: 0;
 }
 
-/* ---- Legal / social / copyright band (section 3) ---- */
-footer .footer .section:last-child {
+/* ---- Legal / social / copyright band (section 3): navy, matching the
+   utility bar at the bottom of lansforsakringar.se's footer ---- */
+footer .footer .section:last-child:not(:first-child) {
   margin-top: 16px;
-  border-top: 1px solid rgb(255 255 255 / 25%);
-  padding-top: 28px;
+  background-color: var(--dark-color);
+  color: var(--background-color);
+  padding: 28px 24px;
+  border-radius: 4px;
+}
+
+footer .footer .section:last-child:not(:first-child) a:any-link {
+  color: var(--background-color);
 }
 
 /* Legal links: horizontal row separated by subtle dividers */
-footer .footer .section:last-child ul {
+footer .footer .section:last-child:not(:first-child) ul {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -91,12 +106,12 @@ footer .footer .section:last-child ul {
   font-weight: 700;
 }
 
-footer .footer .section:last-child ul li {
+footer .footer .section:last-child:not(:first-child) ul li {
   position: relative;
   padding: 0;
 }
 
-footer .footer .section:last-child ul li:not(:last-child)::after {
+footer .footer .section:last-child:not(:first-child) ul li:not(:last-child)::after {
   content: '';
   position: absolute;
   right: -10px;
@@ -107,41 +122,41 @@ footer .footer .section:last-child ul li:not(:last-child)::after {
   transform: translateY(-50%);
 }
 
-footer .footer .section:last-child ul a:hover {
+footer .footer .section:last-child:not(:first-child) ul a:hover {
   color: rgb(255 255 255 / 85%);
   text-decoration: underline;
 }
 
-footer .footer .section:last-child p {
+footer .footer .section:last-child:not(:first-child) p {
   margin: 12px 0 0;
 }
 
 /* Social links row (Facebook / LinkedIn): rounded chip buttons */
-footer .footer .section:last-child p:first-of-type {
+footer .footer .section:last-child:not(:first-child) p:first-of-type {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
 }
 
-footer .footer .section:last-child p:first-of-type a {
+footer .footer .section:last-child:not(:first-child) p:first-of-type a {
   display: inline-flex;
   align-items: center;
   border: 1px solid rgb(255 255 255 / 40%);
-  border-radius: 2em;
+  border-radius: 4px;
   padding: 6px 18px;
   font-size: var(--body-font-size-xs);
   font-weight: 700;
   transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-footer .footer .section:last-child p:first-of-type a:hover,
-footer .footer .section:last-child p:first-of-type a:focus {
+footer .footer .section:last-child:not(:first-child) p:first-of-type a:hover,
+footer .footer .section:last-child:not(:first-child) p:first-of-type a:focus {
   background-color: var(--background-color);
   color: var(--dark-color);
   text-decoration: none;
 }
 
-footer .footer .section:last-child p:last-child {
+footer .footer .section:last-child:not(:first-child) p:last-child {
   margin-top: 20px;
   color: rgb(255 255 255 / 70%);
   font-size: var(--body-font-size-xs);
@@ -169,5 +184,9 @@ footer .footer .section:last-child p:last-child {
   footer .footer .section:nth-child(2) h4,
   footer .footer .section:nth-child(2) h4:first-child {
     margin-top: 0;
+  }
+
+  footer .footer .section:last-child:not(:first-child) {
+    padding: 28px 32px;
   }
 }

@@ -4,8 +4,8 @@ export default function decorate(block) {
   const imageRow = rows.find((r) => r.querySelector('picture'));
   const contentRow = rows.find((r) => r !== imageRow && r.textContent.trim());
 
-  if (imageRow) imageRow.classList.add('hero-purple-image');
-  if (contentRow) contentRow.classList.add('hero-purple-content');
+  if (imageRow) imageRow.classList.add('hero-banner-image');
+  if (contentRow) contentRow.classList.add('hero-banner-content');
 
   if (!imageRow) {
     block.classList.add('no-image');

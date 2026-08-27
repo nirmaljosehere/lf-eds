@@ -1,18 +1,18 @@
-.hero-purple-container .hero-purple-wrapper {
+.hero-banner-container .hero-banner-wrapper {
   max-width: unset;
   padding: 0;
 }
 
-/* Class name kept as "hero-purple" for backwards compatibility with
+/* Class name kept as "hero-banner" for backwards compatibility with
    existing authored content. Three selectable styles: "overlay" (text on
    top of the image), "stacked" (image above, text below), and
    "stacked-blue" (stacked, with a blue text block). */
-.hero-purple {
+.hero-banner {
   padding: 0;
 }
 
-.hero-purple .hero-purple-image picture,
-.hero-purple .hero-purple-image img {
+.hero-banner .hero-banner-image picture,
+.hero-banner .hero-banner-image img {
   display: block;
   width: 100%;
   height: auto;
@@ -20,68 +20,68 @@
 
 /* stacked / stacked-blue: cap the image to the same max height the
    overlay style uses, instead of the image's full natural height */
-.hero-purple:not(.overlay) .hero-purple-image img {
+.hero-banner:not(.overlay) .hero-banner-image img {
   max-height: 320px;
   object-fit: cover;
 }
 
-.hero-purple .hero-purple-content {
+.hero-banner .hero-banner-content {
   padding: 32px 24px;
   text-align: center;
 }
 
-.hero-purple .hero-purple-content > * {
+.hero-banner .hero-banner-content > * {
   max-width: 640px;
   margin-left: auto;
   margin-right: auto;
 }
 
-.hero-purple .hero-purple-content h1 {
+.hero-banner .hero-banner-content h1 {
   margin-top: 0;
 }
 
-.hero-purple .hero-purple-content em {
+.hero-banner .hero-banner-content em {
   color: var(--lf-red);
   font-style: normal;
 }
 
 /* text-only variant (no image authored) */
-.hero-purple.no-image {
+.hero-banner.no-image {
   background-color: var(--lf-navy);
   padding: 48px 24px;
 }
 
-.hero-purple.no-image * {
+.hero-banner.no-image * {
   color: #fff;
 }
 
 /* "Text below the image - Blue Theme" */
-.hero-purple.stacked-blue .hero-purple-content {
+.hero-banner.stacked-blue .hero-banner-content {
   background-color: var(--lf-blue);
 }
 
-.hero-purple.stacked-blue .hero-purple-content * {
+.hero-banner.stacked-blue .hero-banner-content * {
   color: #fff;
 }
 
-.hero-purple.stacked-blue .hero-purple-content a:any-link {
-  color: #fff;
-  text-decoration: underline;
-}
-
-.hero-purple.stacked-blue .hero-purple-content em a:any-link {
+.hero-banner.stacked-blue .hero-banner-content a:any-link {
   color: #fff;
   text-decoration: underline;
 }
 
-.hero-purple.stacked-blue .hero-purple-content a.button:any-link {
+.hero-banner.stacked-blue .hero-banner-content em a:any-link {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.hero-banner.stacked-blue .hero-banner-content a.button:any-link {
   background-color: #fff;
   border-color: #fff;
   color: var(--lf-navy);
 }
 
-.hero-purple.stacked-blue .hero-purple-content a.button:hover,
-.hero-purple.stacked-blue .hero-purple-content a.button:focus {
+.hero-banner.stacked-blue .hero-banner-content a.button:hover,
+.hero-banner.stacked-blue .hero-banner-content a.button:focus {
   background-color: var(--lf-navy);
   border-color: #fff;
   color: #fff;
@@ -89,25 +89,25 @@
 }
 
 /* "Text overlayed on Image" */
-.hero-purple.overlay {
+.hero-banner.overlay {
   position: relative;
   overflow: hidden;
   min-height: 320px;
   display: flex;
 }
 
-.hero-purple.overlay .hero-purple-image {
+.hero-banner.overlay .hero-banner-image {
   position: absolute;
   inset: 0;
   z-index: 0;
 }
 
-.hero-purple.overlay .hero-purple-image img {
+.hero-banner.overlay .hero-banner-image img {
   height: 100%;
   object-fit: cover;
 }
 
-.hero-purple.overlay::before {
+.hero-banner.overlay::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -115,7 +115,7 @@
   background: linear-gradient(180deg, rgb(0 0 0 / 10%) 0%, rgb(0 0 0 / 65%) 100%);
 }
 
-.hero-purple.overlay .hero-purple-content {
+.hero-banner.overlay .hero-banner-content {
   position: relative;
   z-index: 2;
   display: flex;
@@ -126,24 +126,24 @@
   text-align: left;
 }
 
-.hero-purple.overlay .hero-purple-content > * {
+.hero-banner.overlay .hero-banner-content > * {
   margin-left: 0;
   margin-right: 0;
   max-width: none;
 }
 
-.hero-purple.overlay .hero-purple-content * {
+.hero-banner.overlay .hero-banner-content * {
   color: #fff;
 }
 
-.hero-purple.overlay .hero-purple-content a.button:any-link {
+.hero-banner.overlay .hero-banner-content a.button:any-link {
   background-color: #fff;
   border-color: #fff;
   color: var(--lf-navy);
 }
 
-.hero-purple.overlay .hero-purple-content a.button:hover,
-.hero-purple.overlay .hero-purple-content a.button:focus {
+.hero-banner.overlay .hero-banner-content a.button:hover,
+.hero-banner.overlay .hero-banner-content a.button:focus {
   background-color: var(--lf-navy);
   border-color: #fff;
   color: #fff;
@@ -151,29 +151,29 @@
 }
 
 @media (width >= 600px) {
-  .hero-purple .hero-purple-content {
+  .hero-banner .hero-banner-content {
     padding: 40px 32px;
   }
 
-  .hero-purple.overlay .hero-purple-content {
+  .hero-banner.overlay .hero-banner-content {
     padding: 40px 48px;
   }
 }
 
 @media (width >= 900px) {
-  .hero-purple.overlay {
+  .hero-banner.overlay {
     min-height: 480px;
   }
 
-  .hero-purple.overlay .hero-purple-content {
+  .hero-banner.overlay .hero-banner-content {
     padding: 56px 64px;
   }
 
-  .hero-purple.overlay .hero-purple-content > * {
+  .hero-banner.overlay .hero-banner-content > * {
     max-width: 640px;
   }
 
-  .hero-purple:not(.overlay) .hero-purple-image img {
+  .hero-banner:not(.overlay) .hero-banner-image img {
     max-height: 480px;
   }
 }

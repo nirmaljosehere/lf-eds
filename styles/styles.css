@@ -534,9 +534,9 @@ main .section.with-sidebar > .default-content-wrapper p {
   hyphens: auto;
 }
 
-/* cards-grid: lay out multiple standalone cards (e.g. several cf-card
-   blocks) in equal-width, equal-height columns, wrapping on narrow
-   screens. Grid (not flex) so column width doesn't depend on content. */
+/* cards-grid: lay out multiple standalone cards in equal-width,
+   equal-height columns, wrapping on narrow screens. Grid (not flex)
+   so column width doesn't depend on content. */
 main .section.cards-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(257px, 1fr));
@@ -554,9 +554,4 @@ main .section.cards-grid > h3 {
 /* stylelint-disable-next-line no-descending-specificity */
 main .section.cards-grid > div {
   min-width: 0;
-}
-
-main .section.cards-grid .cf-card {
-  max-width: none;
-  height: 100%;
 }

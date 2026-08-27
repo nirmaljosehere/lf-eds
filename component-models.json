@@ -232,24 +232,6 @@
     ]
   },
   {
-    "id": "accordion-legal-item",
-    "fields": [
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "title",
-        "label": "Title"
-      },
-      {
-        "component": "richtext",
-        "name": "body",
-        "value": "",
-        "label": "Body",
-        "valueType": "string"
-      }
-    ]
-  },
-  {
     "id": "article-byline",
     "fields": [
       {
@@ -293,63 +275,6 @@
     ]
   },
   {
-    "id": "cards-account-item",
-    "fields": [
-      {
-        "component": "reference",
-        "valueType": "string",
-        "name": "image",
-        "label": "Image",
-        "multi": false
-      },
-      {
-        "component": "richtext",
-        "name": "text",
-        "value": "",
-        "label": "Text",
-        "valueType": "string"
-      }
-    ]
-  },
-  {
-    "id": "cards-cover-item",
-    "fields": [
-      {
-        "component": "reference",
-        "valueType": "string",
-        "name": "image",
-        "label": "Image",
-        "multi": false
-      },
-      {
-        "component": "richtext",
-        "name": "text",
-        "value": "",
-        "label": "Text",
-        "valueType": "string"
-      }
-    ]
-  },
-  {
-    "id": "cards-icon-item",
-    "fields": [
-      {
-        "component": "reference",
-        "valueType": "string",
-        "name": "image",
-        "label": "Image",
-        "multi": false
-      },
-      {
-        "component": "richtext",
-        "name": "text",
-        "value": "",
-        "label": "Text",
-        "valueType": "string"
-      }
-    ]
-  },
-  {
     "id": "card",
     "fields": [
       {
@@ -384,36 +309,6 @@
         "value": "",
         "label": "Text",
         "valueType": "string"
-      }
-    ]
-  },
-  {
-    "id": "cf-card",
-    "fields": [
-      {
-        "component": "aem-content-fragment",
-        "name": "reference",
-        "label": "Content Fragment",
-        "valueType": "string",
-        "validation": {
-          "rootPath": "/content/dam/natwest-xwalk"
-        }
-      },
-      {
-        "component": "select",
-        "name": "displayMode",
-        "label": "Display as",
-        "value": "card",
-        "options": [
-          {
-            "name": "Card",
-            "value": "card"
-          },
-          {
-            "name": "Raw JSON",
-            "value": "json"
-          }
-        ]
       }
     ]
   },
@@ -684,32 +579,6 @@
     ]
   },
   {
-    "id": "hero",
-    "fields": [
-      {
-        "component": "reference",
-        "valueType": "string",
-        "name": "image",
-        "label": "Image",
-        "multi": false
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "imageAlt",
-        "label": "Alt",
-        "value": ""
-      },
-      {
-        "component": "richtext",
-        "name": "text",
-        "value": "",
-        "label": "Text",
-        "valueType": "string"
-      }
-    ]
-  },
-  {
     "id": "quote",
     "fields": [
       {
@@ -782,6 +651,183 @@
         "value": "",
         "label": "Body",
         "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "teaser",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "title",
+        "value": "Your text will show here.",
+        "label": "Title",
+        "valueType": "string"
+      },
+      {
+        "component": "select",
+        "name": "teaserStyle",
+        "value": "image",
+        "label": "Style",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "Video",
+            "value": "video"
+          },
+          {
+            "name": "Image",
+            "value": "image"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "textPosition",
+        "value": "overlay",
+        "label": "Text Position",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "Overlay (centered on image)",
+            "value": "overlay"
+          },
+          {
+            "name": "Beside image – text left",
+            "value": "text-left"
+          },
+          {
+            "name": "Beside image – text right",
+            "value": "text-right"
+          }
+        ]
+      },
+      {
+        "component": "container",
+        "label": "Video Properties",
+        "name": "videoProperties",
+        "valueType": "string",
+        "condition": {
+          "===": [
+            {
+              "var": "teaserStyle"
+            },
+            "video"
+          ]
+        },
+        "fields": [
+          {
+            "component": "text",
+            "valueType": "string",
+            "name": "videoReference",
+            "label": "Video Reference",
+            "multi": false,
+            "description": "Provide a URL for the video background."
+          },
+          {
+            "component": "select",
+            "name": "videoBehavior",
+            "value": "autoplay",
+            "label": "Video Behavior (on load)",
+            "valueType": "string",
+            "options": [
+              {
+                "name": "Autoplay",
+                "value": "autoplay"
+              },
+              {
+                "name": "Pause",
+                "value": "pause"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "component": "container",
+        "label": "Image Properties",
+        "name": "imageProperties",
+        "valueType": "string",
+        "condition": {
+          "===": [
+            {
+              "var": "teaserStyle"
+            },
+            "image"
+          ]
+        },
+        "fields": [
+          {
+            "component": "reference",
+            "valueType": "string",
+            "name": "imageRef",
+            "label": "Image",
+            "multi": false
+          },
+          {
+            "component": "text",
+            "valueType": "string",
+            "name": "alt",
+            "value": "Default alt",
+            "label": "Alt Text"
+          }
+        ]
+      },
+      {
+        "component": "container",
+        "label": "Button Properties",
+        "name": "buttonProperties",
+        "valueType": "string",
+        "fields": [
+          {
+            "component": "text",
+            "valueType": "string",
+            "name": "buttonLabel",
+            "value": "Button",
+            "label": "Button Text"
+          },
+          {
+            "component": "aem-content",
+            "name": "btn-link",
+            "label": "Button Link",
+            "valueType": "string",
+            "rootPath": "",
+            "description": "Path to linked AEM content"
+          },
+          {
+            "component": "select",
+            "name": "ctastyle",
+            "label": "CTA Style",
+            "valueType": "string",
+            "value": "button",
+            "options": [
+              {
+                "name": "Default Button",
+                "value": "default"
+              },
+              {
+                "name": "Primary Button",
+                "value": "button"
+              },
+              {
+                "name": "Secondary Button",
+                "value": "button-secondary"
+              },
+              {
+                "name": "Dark Button",
+                "value": "button-dark"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "component": "boolean",
+        "label": "Enable Swoosh Effect",
+        "description": "Enable Circular effect on the component",
+        "name": "useSwoosh",
+        "value": "true",
+        "valueType": "boolean"
       }
     ]
   },

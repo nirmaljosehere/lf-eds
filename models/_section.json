@@ -79,18 +79,13 @@
         "image",
         "button",
         "title",
-        "hero",
         "hero-purple",
         "cards",
-        "cards-account",
-        "cards-cover",
-        "cards-icon",
         "carousel-cards",
         "columns",
         "columns-feature",
         "fragment",
         "accordion-help",
-        "accordion-legal",
         "tabs-tracker",
         "search-faq",
         "widget",
@@ -100,9 +95,9 @@
         "breadcrumbs",
         "quote",
         "ranking-chart",
-        "cf-card",
         "contentfragment",
-        "form"
+        "form",
+        "teaser"
       ]
     }
   ]

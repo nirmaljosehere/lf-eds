@@ -18,10 +18,13 @@
   --background-color: #fff;
   --light-color: var(--lf-grey-tint);
   --dark-color: var(--lf-navy);
+  --dark-color-opacity: rgb(0 66 122 / 15%);
   --text-color: var(--lf-text);
+  --text-light: #fff;
   --heading-color: var(--lf-navy);
   --link-color: var(--lf-blue);
   --link-hover-color: var(--lf-navy);
+  --brand-color: var(--lf-blue);
 
   /* fonts (Länsförsäkringar brand faces with fallbacks) */
   --heading-font-family: "LF Rubrik", georgia, serif;

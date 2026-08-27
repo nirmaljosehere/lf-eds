@@ -1,0 +1,80 @@
+.form form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 600px;
+}
+
+.form .form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form .form-field label {
+  font-family: var(--heading-font-family);
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.form .form-field input,
+.form .form-field select,
+.form .form-field textarea {
+  font-family: var(--body-font-family);
+  font-size: var(--body-font-size-m);
+  padding: 10px 12px;
+  border: 1px solid var(--light-color);
+  border-radius: 4px;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.form .form-field input:focus,
+.form .form-field select:focus,
+.form .form-field textarea:focus {
+  outline: 2px solid var(--lf-blue);
+  outline-offset: 1px;
+}
+
+.form .form-field-checkbox-option,
+.form .form-field-radio-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.form .form-field-checkbox-option label,
+.form .form-field-radio-option label {
+  font-weight: normal;
+}
+
+.form .form-field-radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form .form-field-help {
+  margin: 0;
+  font-size: var(--body-font-size-s);
+  color: var(--text-color);
+}
+
+.form .form-field-submit {
+  margin-top: 10px;
+}
+
+.form .form-success-message {
+  padding: 16px;
+  background-color: var(--lf-blue-tint);
+  border-radius: 4px;
+  color: var(--text-color);
+}
+
+@media (width >= 600px) {
+  .form .form-field input,
+  .form .form-field select,
+  .form .form-field textarea {
+    padding: 12px 14px;
+  }
+}

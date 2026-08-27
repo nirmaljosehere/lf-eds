@@ -512,6 +512,91 @@
     ]
   },
   {
+    "id": "form-field",
+    "fields": [
+      {
+        "component": "select",
+        "name": "fieldtype",
+        "label": "Field Type",
+        "value": "text",
+        "options": [
+          {
+            "name": "Text",
+            "value": "text"
+          },
+          {
+            "name": "Email",
+            "value": "email"
+          },
+          {
+            "name": "Phone",
+            "value": "tel"
+          },
+          {
+            "name": "Number",
+            "value": "number"
+          },
+          {
+            "name": "Text Area",
+            "value": "textarea"
+          },
+          {
+            "name": "Dropdown",
+            "value": "select"
+          },
+          {
+            "name": "Checkbox",
+            "value": "checkbox"
+          },
+          {
+            "name": "Radio Group",
+            "value": "radio"
+          },
+          {
+            "name": "Submit Button",
+            "value": "submit"
+          }
+        ]
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "label",
+        "label": "Label (or button text for Submit)"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "name",
+        "label": "Field Name (optional, derived from label)"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "placeholder",
+        "label": "Placeholder"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "options",
+        "label": "Options (comma-separated, for Dropdown/Radio Group)"
+      },
+      {
+        "component": "boolean",
+        "valueType": "boolean",
+        "name": "required",
+        "label": "Required"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "helptext",
+        "label": "Help Text"
+      }
+    ]
+  },
+  {
     "id": "fragment",
     "fields": [
       {

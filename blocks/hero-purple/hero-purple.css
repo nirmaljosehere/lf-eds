@@ -3,18 +3,37 @@
   padding: 0;
 }
 
-/* Full-bleed brand-blue banner, text left + image right. Class name kept as
-   "hero-purple" for backwards compatibility with existing authored content. */
+/* Class name kept as "hero-purple" for backwards compatibility with
+   existing authored content. Three selectable styles: "overlay" (text on
+   top of the image), "stacked" (image above, text below), and
+   "stacked-blue" (stacked, with a blue text block). */
 .hero-purple {
-  background-color: var(--lf-blue, #005aa0);
-  color: #fff;
-  padding: 40px 24px;
+  padding: 0;
 }
 
-.hero-purple .hero-purple-content h1,
-.hero-purple .hero-purple-content h2,
-.hero-purple .hero-purple-content p {
-  color: #fff;
+.hero-purple .hero-purple-image picture,
+.hero-purple .hero-purple-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* stacked / stacked-blue: cap the image to the same max height the
+   overlay style uses, instead of the image's full natural height */
+.hero-purple:not(.overlay) .hero-purple-image img {
+  max-height: 320px;
+  object-fit: cover;
+}
+
+.hero-purple .hero-purple-content {
+  padding: 32px 24px;
+  text-align: center;
+}
+
+.hero-purple .hero-purple-content > * {
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .hero-purple .hero-purple-content h1 {
@@ -26,87 +45,135 @@
   font-style: normal;
 }
 
-/* plain (non-button) links authored inline in the hero text: keep them
-   legible on the blue background instead of inheriting the global
-   dark-blue link color. */
-.hero-purple .hero-purple-content a:any-link {
-  color: #fff;
-  text-decoration: underline;
-}
-
-.hero-purple .hero-purple-content em a:any-link {
-  color: var(--lf-red);
-}
-
-.hero-purple .hero-purple-content a.button:any-link {
-  background-color: #fff;
-  border-color: #fff;
-  color: var(--lf-navy);
-}
-
-.hero-purple .hero-purple-content a.button:hover,
-.hero-purple .hero-purple-content a.button:focus {
-  background-color: var(--lf-navy);
-  border-color: #fff;
-  color: #fff;
-  box-shadow: 0 4px 12px rgb(0 0 0 / 25%);
-}
-
-.hero-purple .hero-purple-image {
-  text-align: center;
-}
-
-.hero-purple .hero-purple-image picture,
-.hero-purple .hero-purple-image img {
-  max-width: 360px;
-  width: 100%;
-  height: auto;
-}
-
-/* text-only variant (product-group banners) */
+/* text-only variant (no image authored) */
 .hero-purple.no-image {
-  background-color: var(--lf-navy, #00427a);
+  background-color: var(--lf-navy);
+  padding: 48px 24px;
 }
 
 .hero-purple.no-image * {
   color: #fff;
 }
 
-/* "Dark blue" style option: same deep blue as the no-image variant,
-   but author-selectable even when an image is present. */
-.hero-purple.dark {
-  background-color: var(--lf-navy, #00427a);
+/* "Text below the image - Blue Theme" */
+.hero-purple.stacked-blue .hero-purple-content {
+  background-color: var(--lf-blue);
+}
+
+.hero-purple.stacked-blue .hero-purple-content * {
+  color: #fff;
+}
+
+.hero-purple.stacked-blue .hero-purple-content a:any-link {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.hero-purple.stacked-blue .hero-purple-content em a:any-link {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.hero-purple.stacked-blue .hero-purple-content a.button:any-link {
+  background-color: #fff;
+  border-color: #fff;
+  color: var(--lf-navy);
+}
+
+.hero-purple.stacked-blue .hero-purple-content a.button:hover,
+.hero-purple.stacked-blue .hero-purple-content a.button:focus {
+  background-color: var(--lf-navy);
+  border-color: #fff;
+  color: #fff;
+  box-shadow: 0 4px 12px rgb(0 0 0 / 25%);
+}
+
+/* "Text overlayed on Image" */
+.hero-purple.overlay {
+  position: relative;
+  overflow: hidden;
+  min-height: 320px;
+  display: flex;
+}
+
+.hero-purple.overlay .hero-purple-image {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.hero-purple.overlay .hero-purple-image img {
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-purple.overlay::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(180deg, rgb(0 0 0 / 10%) 0%, rgb(0 0 0 / 65%) 100%);
+}
+
+.hero-purple.overlay .hero-purple-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 100%;
+  padding: 24px;
+  text-align: left;
+}
+
+.hero-purple.overlay .hero-purple-content > * {
+  margin-left: 0;
+  margin-right: 0;
+  max-width: none;
+}
+
+.hero-purple.overlay .hero-purple-content * {
+  color: #fff;
+}
+
+.hero-purple.overlay .hero-purple-content a.button:any-link {
+  background-color: #fff;
+  border-color: #fff;
+  color: var(--lf-navy);
+}
+
+.hero-purple.overlay .hero-purple-content a.button:hover,
+.hero-purple.overlay .hero-purple-content a.button:focus {
+  background-color: var(--lf-navy);
+  border-color: #fff;
+  color: #fff;
+  box-shadow: 0 4px 12px rgb(0 0 0 / 25%);
+}
+
+@media (width >= 600px) {
+  .hero-purple .hero-purple-content {
+    padding: 40px 32px;
+  }
+
+  .hero-purple.overlay .hero-purple-content {
+    padding: 40px 48px;
+  }
 }
 
 @media (width >= 900px) {
-  .hero-purple {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    align-items: center;
-    min-height: 360px;
-    max-width: var(--content-max-width, 1200px);
-    margin: 0 auto;
-    padding: 48px 32px;
+  .hero-purple.overlay {
+    min-height: 480px;
   }
 
-  /* content left, image right, regardless of source row order */
-  .hero-purple .hero-purple-content {
-    order: 1;
+  .hero-purple.overlay .hero-purple-content {
+    padding: 56px 64px;
   }
 
-  .hero-purple .hero-purple-image {
-    order: 2;
-    text-align: right;
+  .hero-purple.overlay .hero-purple-content > * {
+    max-width: 640px;
   }
 
-  /* "Image left" style option: swap the two columns */
-  .hero-purple.image-left .hero-purple-content {
-    order: 2;
-  }
-
-  .hero-purple.image-left .hero-purple-image {
-    order: 1;
-    text-align: left;
+  .hero-purple:not(.overlay) .hero-purple-image img {
+    max-height: 480px;
   }
 }

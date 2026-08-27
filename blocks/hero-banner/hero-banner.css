@@ -1,12 +1,9 @@
-.hero-banner-container .hero-banner-wrapper {
-  max-width: unset;
-  padding: 0;
-}
-
 /* Class name kept as "hero-banner" for backwards compatibility with
    existing authored content. Three selectable styles: "overlay" (text on
    top of the image), "stacked" (image above, text below), and
-   "stacked-blue" (stacked, with a blue text block). */
+   "stacked-blue" (stacked, with a blue text block). Width is constrained
+   to the same content width as the header and other components, not
+   full-bleed. */
 .hero-banner {
   padding: 0;
 }

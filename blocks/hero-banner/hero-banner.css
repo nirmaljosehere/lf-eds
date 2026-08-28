@@ -6,6 +6,7 @@
    full-bleed. */
 .hero-banner {
   padding: 0;
+  margin-bottom: 32px;
 }
 
 .hero-banner .hero-banner-image picture,
@@ -158,6 +159,10 @@
 }
 
 @media (width >= 900px) {
+  .hero-banner {
+    margin-bottom: 48px;
+  }
+
   .hero-banner.overlay {
     min-height: 480px;
   }
